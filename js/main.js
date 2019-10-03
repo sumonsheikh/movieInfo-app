@@ -17,6 +17,7 @@ function getMovies(searchText){
         let output='';
         $.each(movies,(index,movie)=>{
             output +=`
+            
             <div class="col-md-3">
                 <div class="well text-center">
                     <img src="${movie.Poster}"/>
@@ -24,7 +25,7 @@ function getMovies(searchText){
                     <a  onClick="movieSelected('${movie.imdbID}')" href="movie.html" class="btn btn-primary">Movie Details</a>
                 </div>
             </div>
-            
+        
             `;
         });
         $('#movies').html(output);
